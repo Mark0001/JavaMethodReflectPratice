@@ -9,4 +9,8 @@ public class PrintMessage {
         System.out.println("hello");
     }
 
+    public void printWhatEverYouWantToSay(String message) {
+        System.out.println(message);
+    }
+
 }

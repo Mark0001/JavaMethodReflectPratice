@@ -10,9 +10,14 @@ public class Main {
             final Method m = c.getMethod("printHello");
             m.invoke(c.newInstance());
 
+            //printWhatEverYouWantToSay
+            final Method p = c.getMethod("printWhatEverYouWantToSay", String.class);
+            p.invoke(c.newInstance(), "GGGGG");
+
             // It should be wrong!
             final Method gg = c.getMethod("gg");
             gg.invoke(c.newInstance());
+
         } catch (final NoSuchMethodException e) {
             e.printStackTrace();
         } catch (final SecurityException e) {
